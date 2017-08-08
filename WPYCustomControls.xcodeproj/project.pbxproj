@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		300030241EF7DD33001A4CFA /* MyPlayProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 300030231EF7DD33001A4CFA /* MyPlayProgressView.m */; };
+		304E30A11EC1BF71007C6055 /* WPYCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E30A01EC1BF71007C6055 /* WPYCarouselView.m */; };
+		30728F1E1F1F333F00CF3977 /* progressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30728F1D1F1F333F00CF3977 /* progressView.m */; };
+		307D57B11F2EE3220011D104 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D57B01F2EE3220011D104 /* MapVC.m */; };
+		307D57B41F2F03C60011D104 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D57B31F2F03C60011D104 /* MKMapView+ZoomLevel.m */; };
+		309FE9051F2F12A8006BE610 /* IGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309FE9041F2F12A8006BE610 /* IGAlertView.m */; };
+		309FE9071F2F223B006BE610 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309FE9061F2F223B006BE610 /* MapKit.framework */; };
+		309FE90B1F2F3422006BE610 /* IGAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 309FE90A1F2F3422006BE610 /* IGAnnotation.m */; };
+		309FE9121F2F4201006BE610 /* ViewAnnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 309FE9111F2F4201006BE610 /* ViewAnnView.m */; };
+		30D7A94F1ED80B60000BC057 /* WPYItemBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A94E1ED80B60000BC057 /* WPYItemBtn.m */; };
+		30D7A95E1ED80FF4000BC057 /* CALayer+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A9541ED80FF4000BC057 /* CALayer+Additions.m */; };
+		30D7A95F1ED80FF4000BC057 /* NSDate+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A9561ED80FF4000BC057 /* NSDate+Additions.m */; };
+		30D7A9601ED80FF4000BC057 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A9581ED80FF4000BC057 /* UIColor+Additions.m */; };
+		30D7A9611ED80FF4000BC057 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A95A1ED80FF4000BC057 /* UIView+Toast.m */; };
+		30D7A9621ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A95D1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m */; };
+		30D7A9651ED81E06000BC057 /* WPYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A9641ED81E06000BC057 /* WPYTabBar.m */; };
+		30E72EDC1ED9303600A57307 /* CustomFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E72EDB1ED9303600A57307 /* CustomFunctionVC.m */; };
+		30E72EDF1ED930CA00A57307 /* CustomModuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E72EDE1ED930CA00A57307 /* CustomModuleVC.m */; };
+		30E72F281ED9792000A57307 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30E72F261ED9791F00A57307 /* AlipaySDK.bundle */; };
+		30E72F291ED9792000A57307 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F271ED9791F00A57307 /* AlipaySDK.framework */; };
+		30E72F2B1ED97A7400A57307 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F2A1ED97A7400A57307 /* libc++.tbd */; };
+		30E72F2D1ED97AA900A57307 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F2C1ED97AA900A57307 /* SystemConfiguration.framework */; };
+		30E72F2F1ED97AC800A57307 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F2E1ED97AC800A57307 /* CoreTelephony.framework */; };
+		30E72F311ED97AE200A57307 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F301ED97AE200A57307 /* QuartzCore.framework */; };
+		30E72F331ED97B0000A57307 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F321ED97B0000A57307 /* CoreText.framework */; };
+		30E72F351ED97B0E00A57307 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F341ED97B0E00A57307 /* CoreGraphics.framework */; };
+		30E72F371ED97B1E00A57307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F361ED97B1E00A57307 /* UIKit.framework */; };
+		30E72F391ED97CAD00A57307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F381ED97CAD00A57307 /* Foundation.framework */; };
+		30E72F3B1ED97CC000A57307 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F3A1ED97CC000A57307 /* CFNetwork.framework */; };
+		30E72F3D1ED97CEF00A57307 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F3C1ED97CEF00A57307 /* CoreMotion.framework */; };
+		30E72F3F1ED97D1F00A57307 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F3E1ED97D1F00A57307 /* libz.tbd */; };
+		30F09A911F301FCF001C5035 /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F09A901F301FCF001C5035 /* ClusterAnnotationView.m */; };
+		30F09A941F304764001C5035 /* IGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F09A931F304764001C5035 /* IGUtils.m */; };
+		702A044D8365172487C05350 /* libPods-WPYCustomControls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5B71EFB6092477BC299176 /* libPods-WPYCustomControls.a */; };
+		E0FD627E1E5944E100763A96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD627D1E5944E100763A96 /* main.m */; };
+		E0FD62811E5944E100763A96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62801E5944E100763A96 /* AppDelegate.m */; };
+		E0FD62841E5944E100763A96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62831E5944E100763A96 /* ViewController.m */; };
+		E0FD62871E5944E100763A96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FD62851E5944E100763A96 /* Main.storyboard */; };
+		E0FD62891E5944E100763A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0FD62881E5944E100763A96 /* Assets.xcassets */; };
+		E0FD628C1E5944E100763A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0FD628A1E5944E100763A96 /* LaunchScreen.storyboard */; };
+		E0FD62981E59464000763A96 /* WPYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62951E59464000763A96 /* WPYNavigationController.m */; };
+		E0FD62991E59464000763A96 /* WPYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62971E59464000763A96 /* WPYTabBarController.m */; };
+		E0FD62A31E594C7900763A96 /* CustomViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62A21E594C7900763A96 /* CustomViewVC.m */; };
+		E0FD62A61E594C9600763A96 /* CustomButtonVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62A51E594C9600763A96 /* CustomButtonVC.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		300030221EF7DD33001A4CFA /* MyPlayProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPlayProgressView.h; sourceTree = "<group>"; };
+		300030231EF7DD33001A4CFA /* MyPlayProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPlayProgressView.m; sourceTree = "<group>"; };
+		304E309F1EC1BF71007C6055 /* WPYCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYCarouselView.h; sourceTree = "<group>"; };
+		304E30A01EC1BF71007C6055 /* WPYCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYCarouselView.m; sourceTree = "<group>"; };
+		30728F1C1F1F333F00CF3977 /* progressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progressView.h; sourceTree = "<group>"; };
+		30728F1D1F1F333F00CF3977 /* progressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = progressView.m; sourceTree = "<group>"; };
+		307D57AF1F2EE3220011D104 /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVC.h; sourceTree = "<group>"; };
+		307D57B01F2EE3220011D104 /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
+		307D57B21F2F03C60011D104 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
+		307D57B31F2F03C60011D104 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
+		309FE9031F2F12A8006BE610 /* IGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAlertView.h; sourceTree = "<group>"; };
+		309FE9041F2F12A8006BE610 /* IGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAlertView.m; sourceTree = "<group>"; };
+		309FE9061F2F223B006BE610 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		309FE9091F2F3422006BE610 /* IGAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAnnotation.h; sourceTree = "<group>"; };
+		309FE90A1F2F3422006BE610 /* IGAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAnnotation.m; sourceTree = "<group>"; };
+		309FE9101F2F4201006BE610 /* ViewAnnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAnnView.h; sourceTree = "<group>"; };
+		309FE9111F2F4201006BE610 /* ViewAnnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAnnView.m; sourceTree = "<group>"; };
+		30D7A94D1ED80B60000BC057 /* WPYItemBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYItemBtn.h; sourceTree = "<group>"; };
+		30D7A94E1ED80B60000BC057 /* WPYItemBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYItemBtn.m; sourceTree = "<group>"; };
+		30D7A9501ED80D56000BC057 /* WPYPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYPrefixHeader.pch; sourceTree = "<group>"; };
+		30D7A9511ED80EA3000BC057 /* WPYConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYConstant.h; sourceTree = "<group>"; };
+		30D7A9531ED80FF4000BC057 /* CALayer+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Additions.h"; sourceTree = "<group>"; };
+		30D7A9541ED80FF4000BC057 /* CALayer+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Additions.m"; sourceTree = "<group>"; };
+		30D7A9551ED80FF4000BC057 /* NSDate+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Additions.h"; sourceTree = "<group>"; };
+		30D7A9561ED80FF4000BC057 /* NSDate+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Additions.m"; sourceTree = "<group>"; };
+		30D7A9571ED80FF4000BC057 /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		30D7A9581ED80FF4000BC057 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		30D7A9591ED80FF4000BC057 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		30D7A95A1ED80FF4000BC057 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		30D7A95C1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+TS_JavaScriptContext.h"; sourceTree = "<group>"; };
+		30D7A95D1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
+		30D7A9631ED81E06000BC057 /* WPYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYTabBar.h; sourceTree = "<group>"; };
+		30D7A9641ED81E06000BC057 /* WPYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYTabBar.m; sourceTree = "<group>"; };
+		30E72EDA1ED9303600A57307 /* CustomFunctionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomFunctionVC.h; path = ../../ViewController/CustomFunctionVC.h; sourceTree = "<group>"; };
+		30E72EDB1ED9303600A57307 /* CustomFunctionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFunctionVC.m; path = ../../ViewController/CustomFunctionVC.m; sourceTree = "<group>"; };
+		30E72EDD1ED930CA00A57307 /* CustomModuleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomModuleVC.h; path = ../../ViewController/CustomModuleVC.h; sourceTree = "<group>"; };
+		30E72EDE1ED930CA00A57307 /* CustomModuleVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomModuleVC.m; path = ../../ViewController/CustomModuleVC.m; sourceTree = "<group>"; };
+		30E72F261ED9791F00A57307 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
+		30E72F271ED9791F00A57307 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		30E72F2A1ED97A7400A57307 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		30E72F2C1ED97AA900A57307 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		30E72F2E1ED97AC800A57307 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		30E72F301ED97AE200A57307 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		30E72F321ED97B0000A57307 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		30E72F341ED97B0E00A57307 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		30E72F361ED97B1E00A57307 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		30E72F381ED97CAD00A57307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		30E72F3A1ED97CC000A57307 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		30E72F3C1ED97CEF00A57307 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		30E72F3E1ED97D1F00A57307 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		30F09A8F1F301FCF001C5035 /* ClusterAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClusterAnnotationView.h; sourceTree = "<group>"; };
+		30F09A901F301FCF001C5035 /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
+		30F09A921F304764001C5035 /* IGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGUtils.h; sourceTree = "<group>"; };
+		30F09A931F304764001C5035 /* IGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUtils.m; sourceTree = "<group>"; };
+		3B5B71EFB6092477BC299176 /* libPods-WPYCustomControls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPYCustomControls.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAFA67E71AE07110596749D /* Pods-WPYCustomControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPYCustomControls.release.xcconfig"; path = "Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls.release.xcconfig"; sourceTree = "<group>"; };
+		9003DCD6F0E445E13CA48B82 /* Pods-WPYCustomControls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPYCustomControls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls.debug.xcconfig"; sourceTree = "<group>"; };
+		E0FD62791E5944E100763A96 /* WPYCustomControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPYCustomControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0FD627D1E5944E100763A96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0FD627F1E5944E100763A96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E0FD62801E5944E100763A96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E0FD62821E5944E100763A96 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E0FD62831E5944E100763A96 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E0FD62861E5944E100763A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0FD62881E5944E100763A96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E0FD628B1E5944E100763A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E0FD628D1E5944E100763A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0FD62941E59464000763A96 /* WPYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYNavigationController.h; sourceTree = "<group>"; };
+		E0FD62951E59464000763A96 /* WPYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYNavigationController.m; sourceTree = "<group>"; };
+		E0FD62961E59464000763A96 /* WPYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYTabBarController.h; sourceTree = "<group>"; };
+		E0FD62971E59464000763A96 /* WPYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYTabBarController.m; sourceTree = "<group>"; };
+		E0FD62A11E594C7900763A96 /* CustomViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomViewVC.h; path = ../../ViewController/CustomViewVC.h; sourceTree = "<group>"; };
+		E0FD62A21E594C7900763A96 /* CustomViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomViewVC.m; path = ../../ViewController/CustomViewVC.m; sourceTree = "<group>"; };
+		E0FD62A41E594C9600763A96 /* CustomButtonVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomButtonVC.h; path = ../../ViewController/CustomButtonVC.h; sourceTree = "<group>"; };
+		E0FD62A51E594C9600763A96 /* CustomButtonVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomButtonVC.m; path = ../../ViewController/CustomButtonVC.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0FD62761E5944E100763A96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E72F3F1ED97D1F00A57307 /* libz.tbd in Frameworks */,
+				30E72F3D1ED97CEF00A57307 /* CoreMotion.framework in Frameworks */,
+				30E72F3B1ED97CC000A57307 /* CFNetwork.framework in Frameworks */,
+				30E72F391ED97CAD00A57307 /* Foundation.framework in Frameworks */,
+				309FE9071F2F223B006BE610 /* MapKit.framework in Frameworks */,
+				30E72F371ED97B1E00A57307 /* UIKit.framework in Frameworks */,
+				30E72F351ED97B0E00A57307 /* CoreGraphics.framework in Frameworks */,
+				30E72F331ED97B0000A57307 /* CoreText.framework in Frameworks */,
+				30E72F311ED97AE200A57307 /* QuartzCore.framework in Frameworks */,
+				30E72F2F1ED97AC800A57307 /* CoreTelephony.framework in Frameworks */,
+				30E72F2D1ED97AA900A57307 /* SystemConfiguration.framework in Frameworks */,
+				30E72F2B1ED97A7400A57307 /* libc++.tbd in Frameworks */,
+				702A044D8365172487C05350 /* libPods-WPYCustomControls.a in Frameworks */,
+				30E72F291ED9792000A57307 /* AlipaySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		304E309E1EC1BF51007C6055 /* WPYCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				304E309F1EC1BF71007C6055 /* WPYCarouselView.h */,
+				304E30A01EC1BF71007C6055 /* WPYCarouselView.m */,
+			);
+			name = WPYCarouselView;
+			path = ../WPYCarouselView;
+			sourceTree = "<group>";
+		};
+		307D57A91F2EE1560011D104 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				307D57AD1F2EE1C40011D104 /* Module */,
+				307D57AC1F2EE1A60011D104 /* Function */,
+				307D57AB1F2EE18C0011D104 /* Button */,
+				307D57AA1F2EE17F0011D104 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		307D57AA1F2EE17F0011D104 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0FD62A11E594C7900763A96 /* CustomViewVC.h */,
+				E0FD62A21E594C7900763A96 /* CustomViewVC.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		307D57AB1F2EE18C0011D104 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				E0FD62A41E594C9600763A96 /* CustomButtonVC.h */,
+				E0FD62A51E594C9600763A96 /* CustomButtonVC.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		307D57AC1F2EE1A60011D104 /* Function */ = {
+			isa = PBXGroup;
+			children = (
+				30E72EDA1ED9303600A57307 /* CustomFunctionVC.h */,
+				30E72EDB1ED9303600A57307 /* CustomFunctionVC.m */,
+			);
+			path = Function;
+			sourceTree = "<group>";
+		};
+		307D57AD1F2EE1C40011D104 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				307D57AE1F2EE2F10011D104 /* Map */,
+				30E72EDD1ED930CA00A57307 /* CustomModuleVC.h */,
+				30E72EDE1ED930CA00A57307 /* CustomModuleVC.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		307D57AE1F2EE2F10011D104 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				309FE90C1F2F3BF9006BE610 /* View */,
+				309FE9081F2F3416006BE610 /* Model */,
+				307D57AF1F2EE3220011D104 /* MapVC.h */,
+				307D57B01F2EE3220011D104 /* MapVC.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		309FE9081F2F3416006BE610 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				309FE9091F2F3422006BE610 /* IGAnnotation.h */,
+				309FE90A1F2F3422006BE610 /* IGAnnotation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		309FE90C1F2F3BF9006BE610 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				309FE9101F2F4201006BE610 /* ViewAnnView.h */,
+				309FE9111F2F4201006BE610 /* ViewAnnView.m */,
+				30F09A8F1F301FCF001C5035 /* ClusterAnnotationView.h */,
+				30F09A901F301FCF001C5035 /* ClusterAnnotationView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		30D7A9491ED800E9000BC057 /* WPYCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				300030221EF7DD33001A4CFA /* MyPlayProgressView.h */,
+				300030231EF7DD33001A4CFA /* MyPlayProgressView.m */,
+				30D7A94C1ED80A79000BC057 /* WPYTabBar */,
+				304E309E1EC1BF51007C6055 /* WPYCarouselView */,
+				30728F1C1F1F333F00CF3977 /* progressView.h */,
+				30728F1D1F1F333F00CF3977 /* progressView.m */,
+				309FE9031F2F12A8006BE610 /* IGAlertView.h */,
+				309FE9041F2F12A8006BE610 /* IGAlertView.m */,
+			);
+			path = WPYCustomView;
+			sourceTree = "<group>";
+		};
+		30D7A94A1ED8010D000BC057 /* WPYManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WPYManager;
+			sourceTree = "<group>";
+		};
+		30D7A94B1ED8012C000BC057 /* WPYTools */ = {
+			isa = PBXGroup;
+			children = (
+				30F09A921F304764001C5035 /* IGUtils.h */,
+				30F09A931F304764001C5035 /* IGUtils.m */,
+				30D7A9521ED80FF4000BC057 /* Category */,
+				30D7A9511ED80EA3000BC057 /* WPYConstant.h */,
+			);
+			path = WPYTools;
+			sourceTree = "<group>";
+		};
+		30D7A94C1ED80A79000BC057 /* WPYTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				30D7A94D1ED80B60000BC057 /* WPYItemBtn.h */,
+				30D7A94E1ED80B60000BC057 /* WPYItemBtn.m */,
+				30D7A9631ED81E06000BC057 /* WPYTabBar.h */,
+				30D7A9641ED81E06000BC057 /* WPYTabBar.m */,
+			);
+			path = WPYTabBar;
+			sourceTree = "<group>";
+		};
+		30D7A9521ED80FF4000BC057 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				307D57B21F2F03C60011D104 /* MKMapView+ZoomLevel.h */,
+				307D57B31F2F03C60011D104 /* MKMapView+ZoomLevel.m */,
+				30D7A9531ED80FF4000BC057 /* CALayer+Additions.h */,
+				30D7A9541ED80FF4000BC057 /* CALayer+Additions.m */,
+				30D7A9551ED80FF4000BC057 /* NSDate+Additions.h */,
+				30D7A9561ED80FF4000BC057 /* NSDate+Additions.m */,
+				30D7A9571ED80FF4000BC057 /* UIColor+Additions.h */,
+				30D7A9581ED80FF4000BC057 /* UIColor+Additions.m */,
+				30D7A9591ED80FF4000BC057 /* UIView+Toast.h */,
+				30D7A95A1ED80FF4000BC057 /* UIView+Toast.m */,
+				30D7A95B1ED80FF4000BC057 /* VB */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		30D7A95B1ED80FF4000BC057 /* VB */ = {
+			isa = PBXGroup;
+			children = (
+				30D7A95C1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.h */,
+				30D7A95D1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m */,
+			);
+			path = VB;
+			sourceTree = "<group>";
+		};
+		30E72F241ED978BC00A57307 /* thirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				30E72F251ED978E900A57307 /* AliSDK */,
+			);
+			path = thirdLibrary;
+			sourceTree = "<group>";
+		};
+		30E72F251ED978E900A57307 /* AliSDK */ = {
+			isa = PBXGroup;
+			children = (
+				30E72F261ED9791F00A57307 /* AlipaySDK.bundle */,
+				30E72F271ED9791F00A57307 /* AlipaySDK.framework */,
+			);
+			path = AliSDK;
+			sourceTree = "<group>";
+		};
+		7A4E662E45AB2337732195DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9003DCD6F0E445E13CA48B82 /* Pods-WPYCustomControls.debug.xcconfig */,
+				3EAFA67E71AE07110596749D /* Pods-WPYCustomControls.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0FD62701E5944E100763A96 = {
+			isa = PBXGroup;
+			children = (
+				E0FD627B1E5944E100763A96 /* WPYCustomControls */,
+				E0FD627A1E5944E100763A96 /* Products */,
+				7A4E662E45AB2337732195DD /* Pods */,
+				E3BE6E583F3BEE47C0ABBB15 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E0FD627A1E5944E100763A96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0FD62791E5944E100763A96 /* WPYCustomControls.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0FD627B1E5944E100763A96 /* WPYCustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				30E72F241ED978BC00A57307 /* thirdLibrary */,
+				30D7A94B1ED8012C000BC057 /* WPYTools */,
+				30D7A94A1ED8010D000BC057 /* WPYManager */,
+				30D7A9491ED800E9000BC057 /* WPYCustomView */,
+				E0FD62931E59464000763A96 /* BaseViewController */,
+				307D57A91F2EE1560011D104 /* Main */,
+				E0FD627F1E5944E100763A96 /* AppDelegate.h */,
+				E0FD62801E5944E100763A96 /* AppDelegate.m */,
+				E0FD62821E5944E100763A96 /* ViewController.h */,
+				E0FD62831E5944E100763A96 /* ViewController.m */,
+				E0FD62851E5944E100763A96 /* Main.storyboard */,
+				E0FD62881E5944E100763A96 /* Assets.xcassets */,
+				E0FD628A1E5944E100763A96 /* LaunchScreen.storyboard */,
+				E0FD628D1E5944E100763A96 /* Info.plist */,
+				E0FD627C1E5944E100763A96 /* Supporting Files */,
+			);
+			path = WPYCustomControls;
+			sourceTree = "<group>";
+		};
+		E0FD627C1E5944E100763A96 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0FD627D1E5944E100763A96 /* main.m */,
+				30D7A9501ED80D56000BC057 /* WPYPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0FD62931E59464000763A96 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E0FD62941E59464000763A96 /* WPYNavigationController.h */,
+				E0FD62951E59464000763A96 /* WPYNavigationController.m */,
+				E0FD62961E59464000763A96 /* WPYTabBarController.h */,
+				E0FD62971E59464000763A96 /* WPYTabBarController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		E3BE6E583F3BEE47C0ABBB15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309FE9061F2F223B006BE610 /* MapKit.framework */,
+				30E72F3E1ED97D1F00A57307 /* libz.tbd */,
+				30E72F3C1ED97CEF00A57307 /* CoreMotion.framework */,
+				30E72F3A1ED97CC000A57307 /* CFNetwork.framework */,
+				30E72F381ED97CAD00A57307 /* Foundation.framework */,
+				30E72F361ED97B1E00A57307 /* UIKit.framework */,
+				30E72F341ED97B0E00A57307 /* CoreGraphics.framework */,
+				30E72F321ED97B0000A57307 /* CoreText.framework */,
+				30E72F301ED97AE200A57307 /* QuartzCore.framework */,
+				30E72F2E1ED97AC800A57307 /* CoreTelephony.framework */,
+				30E72F2C1ED97AA900A57307 /* SystemConfiguration.framework */,
+				30E72F2A1ED97A7400A57307 /* libc++.tbd */,
+				3B5B71EFB6092477BC299176 /* libPods-WPYCustomControls.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0FD62781E5944E100763A96 /* WPYCustomControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0FD62901E5944E100763A96 /* Build configuration list for PBXNativeTarget "WPYCustomControls" */;
+			buildPhases = (
+				BF7B30F871C2626EBF7EB6E5 /* [CP] Check Pods Manifest.lock */,
+				E0FD62751E5944E100763A96 /* Sources */,
+				E0FD62761E5944E100763A96 /* Frameworks */,
+				E0FD62771E5944E100763A96 /* Resources */,
+				1A1E3E81F9E148D3C90C6610 /* [CP] Embed Pods Frameworks */,
+				577E55029A5E846EABAC0A31 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WPYCustomControls;
+			productName = WPYCustomControls;
+			productReference = E0FD62791E5944E100763A96 /* WPYCustomControls.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0FD62711E5944E100763A96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = wpy_person;
+				TargetAttributes = {
+					E0FD62781E5944E100763A96 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3U7NTNRMAV;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = E0FD62741E5944E100763A96 /* Build configuration list for PBXProject "WPYCustomControls" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0FD62701E5944E100763A96;
+			productRefGroup = E0FD627A1E5944E100763A96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0FD62781E5944E100763A96 /* WPYCustomControls */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0FD62771E5944E100763A96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0FD628C1E5944E100763A96 /* LaunchScreen.storyboard in Resources */,
+				E0FD62891E5944E100763A96 /* Assets.xcassets in Resources */,
+				30E72F281ED9792000A57307 /* AlipaySDK.bundle in Resources */,
+				E0FD62871E5944E100763A96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A1E3E81F9E148D3C90C6610 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		577E55029A5E846EABAC0A31 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF7B30F871C2626EBF7EB6E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0FD62751E5944E100763A96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E72EDF1ED930CA00A57307 /* CustomModuleVC.m in Sources */,
+				30728F1E1F1F333F00CF3977 /* progressView.m in Sources */,
+				30D7A9651ED81E06000BC057 /* WPYTabBar.m in Sources */,
+				309FE9051F2F12A8006BE610 /* IGAlertView.m in Sources */,
+				E0FD62A31E594C7900763A96 /* CustomViewVC.m in Sources */,
+				30F09A911F301FCF001C5035 /* ClusterAnnotationView.m in Sources */,
+				309FE9121F2F4201006BE610 /* ViewAnnView.m in Sources */,
+				30F09A941F304764001C5035 /* IGUtils.m in Sources */,
+				309FE90B1F2F3422006BE610 /* IGAnnotation.m in Sources */,
+				30D7A9601ED80FF4000BC057 /* UIColor+Additions.m in Sources */,
+				304E30A11EC1BF71007C6055 /* WPYCarouselView.m in Sources */,
+				300030241EF7DD33001A4CFA /* MyPlayProgressView.m in Sources */,
+				307D57B41F2F03C60011D104 /* MKMapView+ZoomLevel.m in Sources */,
+				30D7A9611ED80FF4000BC057 /* UIView+Toast.m in Sources */,
+				E0FD62981E59464000763A96 /* WPYNavigationController.m in Sources */,
+				307D57B11F2EE3220011D104 /* MapVC.m in Sources */,
+				30D7A94F1ED80B60000BC057 /* WPYItemBtn.m in Sources */,
+				30E72EDC1ED9303600A57307 /* CustomFunctionVC.m in Sources */,
+				E0FD62841E5944E100763A96 /* ViewController.m in Sources */,
+				30D7A95E1ED80FF4000BC057 /* CALayer+Additions.m in Sources */,
+				E0FD62A61E594C9600763A96 /* CustomButtonVC.m in Sources */,
+				E0FD62811E5944E100763A96 /* AppDelegate.m in Sources */,
+				E0FD627E1E5944E100763A96 /* main.m in Sources */,
+				30D7A95F1ED80FF4000BC057 /* NSDate+Additions.m in Sources */,
+				30D7A9621ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m in Sources */,
+				E0FD62991E59464000763A96 /* WPYTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E0FD62851E5944E100763A96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0FD62861E5944E100763A96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0FD628A1E5944E100763A96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0FD628B1E5944E100763A96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0FD628E1E5944E100763A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E0FD628F1E5944E100763A96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0FD62911E5944E100763A96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9003DCD6F0E445E13CA48B82 /* Pods-WPYCustomControls.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3U7NTNRMAV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WPYCustomControls/thirdLibrary/AliSDK",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WPYCustomControls/WPYPrefixHeader.pch";
+				INFOPLIST_FILE = WPYCustomControls/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wpy-person.WPYCustomControls";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E0FD62921E5944E100763A96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EAFA67E71AE07110596749D /* Pods-WPYCustomControls.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3U7NTNRMAV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WPYCustomControls/thirdLibrary/AliSDK",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WPYCustomControls/WPYPrefixHeader.pch";
+				INFOPLIST_FILE = WPYCustomControls/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "wpy-person.WPYCustomControls";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0FD62741E5944E100763A96 /* Build configuration list for PBXProject "WPYCustomControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0FD628E1E5944E100763A96 /* Debug */,
+				E0FD628F1E5944E100763A96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0FD62901E5944E100763A96 /* Build configuration list for PBXNativeTarget "WPYCustomControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0FD62911E5944E100763A96 /* Debug */,
+				E0FD62921E5944E100763A96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0FD62711E5944E100763A96 /* Project object */;
+}

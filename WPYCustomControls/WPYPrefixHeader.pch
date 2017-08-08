@@ -1,0 +1,17 @@
+//
+//  WPYPrefixHeader.pch
+//  WPYCustomControls
+//
+//  Created by 王鹏宇 on 2017/5/26.
+//  Copyright © 2017年 wpy_person. All rights reserved.
+//
+
+#ifndef WPYPrefixHeader_pch
+#define WPYPrefixHeader_pch
+#import "UIColor+Additions.h"
+#import "WPYConstant.h"
+#import "Masonry.h"
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* WPYPrefixHeader_pch */
