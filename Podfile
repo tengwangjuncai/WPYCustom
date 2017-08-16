@@ -9,6 +9,11 @@ pod 'MJRefresh'
 pod 'SAMKeychain'
 pod 'AFNetworking'
 pod 'SDWebImage'
+pod ‘UMengUShare/UI’
+pod ‘UMengUShare/Social/WeChat'
+pod ‘UMengUShare/Social/QQ'
+pod ‘UMengUShare/Social/Sina'
+pod ‘UMengUShare/Social/Twitter'
 
 pod 'kingpin'
 end

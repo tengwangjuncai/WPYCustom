@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WPYTabBarController.h"
+#import "IGShare.h"
 @interface AppDelegate ()
 
 @end
@@ -23,7 +24,38 @@
     NSLog(@"%ld",tabBarController.viewControllers.count);
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
-    return YES;}
+    [self setupUMSocialManager];
+    return YES;
+}
+
+
+- (void)setupUMSocialManager {
+    
+    // 设置友盟appkey
+    [[UMSocialManager defaultManager] setUmSocialAppkey:UMENG_APPKEY];
+    
+    [IGShare configIGSharePlatforms];
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url options:options];
+    if (!result) {
+        
+    }
+    
+     return  result;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
+    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+    if (!result) {
+        // 其他如支付等SDK的回调
+    }
+    return result;
+}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {

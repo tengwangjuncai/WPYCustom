@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		300030241EF7DD33001A4CFA /* MyPlayProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 300030231EF7DD33001A4CFA /* MyPlayProgressView.m */; };
 		304E30A11EC1BF71007C6055 /* WPYCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = 304E30A01EC1BF71007C6055 /* WPYCarouselView.m */; };
+		305586971F41769600BA994C /* IGShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 305586961F41769600BA994C /* IGShare.m */; };
+		305586AF1F41C23600BA994C /* SnailSheetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 305586AA1F41C23600BA994C /* SnailSheetCell.m */; };
+		305586B01F41C23600BA994C /* SnailSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 305586AC1F41C23600BA994C /* SnailSheetView.m */; };
+		305586B11F41C23600BA994C /* SnailSheetViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 305586AE1F41C23600BA994C /* SnailSheetViewConfig.m */; };
 		30728F1E1F1F333F00CF3977 /* progressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30728F1D1F1F333F00CF3977 /* progressView.m */; };
 		307D57B11F2EE3220011D104 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D57B01F2EE3220011D104 /* MapVC.m */; };
 		307D57B41F2F03C60011D104 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D57B31F2F03C60011D104 /* MKMapView+ZoomLevel.m */; };
@@ -23,6 +27,8 @@
 		30D7A9611ED80FF4000BC057 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A95A1ED80FF4000BC057 /* UIView+Toast.m */; };
 		30D7A9621ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A95D1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m */; };
 		30D7A9651ED81E06000BC057 /* WPYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D7A9641ED81E06000BC057 /* WPYTabBar.m */; };
+		30DF5A0A1F42AD5800F11649 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 30DF5A061F42AD5800F11649 /* README.md */; };
+		30DF5A0B1F42AD5800F11649 /* SnailPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DF5A091F42AD5800F11649 /* SnailPopupController.m */; };
 		30E72EDC1ED9303600A57307 /* CustomFunctionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E72EDB1ED9303600A57307 /* CustomFunctionVC.m */; };
 		30E72EDF1ED930CA00A57307 /* CustomModuleVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E72EDE1ED930CA00A57307 /* CustomModuleVC.m */; };
 		30E72F281ED9792000A57307 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30E72F261ED9791F00A57307 /* AlipaySDK.bundle */; };
@@ -40,6 +46,12 @@
 		30E72F3F1ED97D1F00A57307 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E72F3E1ED97D1F00A57307 /* libz.tbd */; };
 		30F09A911F301FCF001C5035 /* ClusterAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F09A901F301FCF001C5035 /* ClusterAnnotationView.m */; };
 		30F09A941F304764001C5035 /* IGUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F09A931F304764001C5035 /* IGUtils.m */; };
+		30F4888F1F3D9E41009B4237 /* MCDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F4888A1F3D9E41009B4237 /* MCDownloader.m */; };
+		30F488901F3D9E41009B4237 /* MCDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F4888C1F3D9E41009B4237 /* MCDownloadOperation.m */; };
+		30F488911F3D9E41009B4237 /* MCDownloadReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F4888E1F3D9E41009B4237 /* MCDownloadReceipt.m */; };
+		30F488951F3D9F68009B4237 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F488931F3D9F68009B4237 /* DownloadViewController.m */; };
+		30F4889A1F3D9FC4009B4237 /* DownloaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F488981F3D9FC4009B4237 /* DownloaderCell.m */; };
+		30F4889B1F3D9FC4009B4237 /* DownloaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F488991F3D9FC4009B4237 /* DownloaderCell.xib */; };
 		702A044D8365172487C05350 /* libPods-WPYCustomControls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5B71EFB6092477BC299176 /* libPods-WPYCustomControls.a */; };
 		E0FD627E1E5944E100763A96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD627D1E5944E100763A96 /* main.m */; };
 		E0FD62811E5944E100763A96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0FD62801E5944E100763A96 /* AppDelegate.m */; };
@@ -58,6 +70,14 @@
 		300030231EF7DD33001A4CFA /* MyPlayProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPlayProgressView.m; sourceTree = "<group>"; };
 		304E309F1EC1BF71007C6055 /* WPYCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYCarouselView.h; sourceTree = "<group>"; };
 		304E30A01EC1BF71007C6055 /* WPYCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYCarouselView.m; sourceTree = "<group>"; };
+		305586951F41769600BA994C /* IGShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGShare.h; sourceTree = "<group>"; };
+		305586961F41769600BA994C /* IGShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGShare.m; sourceTree = "<group>"; };
+		305586A91F41C23600BA994C /* SnailSheetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailSheetCell.h; sourceTree = "<group>"; };
+		305586AA1F41C23600BA994C /* SnailSheetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetCell.m; sourceTree = "<group>"; };
+		305586AB1F41C23600BA994C /* SnailSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailSheetView.h; sourceTree = "<group>"; };
+		305586AC1F41C23600BA994C /* SnailSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetView.m; sourceTree = "<group>"; };
+		305586AD1F41C23600BA994C /* SnailSheetViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailSheetViewConfig.h; sourceTree = "<group>"; };
+		305586AE1F41C23600BA994C /* SnailSheetViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailSheetViewConfig.m; sourceTree = "<group>"; };
 		30728F1C1F1F333F00CF3977 /* progressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progressView.h; sourceTree = "<group>"; };
 		30728F1D1F1F333F00CF3977 /* progressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = progressView.m; sourceTree = "<group>"; };
 		307D57AF1F2EE3220011D104 /* MapVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapVC.h; sourceTree = "<group>"; };
@@ -87,6 +107,9 @@
 		30D7A95D1ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+TS_JavaScriptContext.m"; sourceTree = "<group>"; };
 		30D7A9631ED81E06000BC057 /* WPYTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPYTabBar.h; sourceTree = "<group>"; };
 		30D7A9641ED81E06000BC057 /* WPYTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPYTabBar.m; sourceTree = "<group>"; };
+		30DF5A061F42AD5800F11649 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		30DF5A081F42AD5800F11649 /* SnailPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnailPopupController.h; sourceTree = "<group>"; };
+		30DF5A091F42AD5800F11649 /* SnailPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnailPopupController.m; sourceTree = "<group>"; };
 		30E72EDA1ED9303600A57307 /* CustomFunctionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomFunctionVC.h; path = ../../ViewController/CustomFunctionVC.h; sourceTree = "<group>"; };
 		30E72EDB1ED9303600A57307 /* CustomFunctionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFunctionVC.m; path = ../../ViewController/CustomFunctionVC.m; sourceTree = "<group>"; };
 		30E72EDD1ED930CA00A57307 /* CustomModuleVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomModuleVC.h; path = ../../ViewController/CustomModuleVC.h; sourceTree = "<group>"; };
@@ -108,6 +131,17 @@
 		30F09A901F301FCF001C5035 /* ClusterAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClusterAnnotationView.m; sourceTree = "<group>"; };
 		30F09A921F304764001C5035 /* IGUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGUtils.h; sourceTree = "<group>"; };
 		30F09A931F304764001C5035 /* IGUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGUtils.m; sourceTree = "<group>"; };
+		30F488891F3D9E41009B4237 /* MCDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDownloader.h; sourceTree = "<group>"; };
+		30F4888A1F3D9E41009B4237 /* MCDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloader.m; sourceTree = "<group>"; };
+		30F4888B1F3D9E41009B4237 /* MCDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDownloadOperation.h; sourceTree = "<group>"; };
+		30F4888C1F3D9E41009B4237 /* MCDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloadOperation.m; sourceTree = "<group>"; };
+		30F4888D1F3D9E41009B4237 /* MCDownloadReceipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCDownloadReceipt.h; sourceTree = "<group>"; };
+		30F4888E1F3D9E41009B4237 /* MCDownloadReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloadReceipt.m; sourceTree = "<group>"; };
+		30F488921F3D9F68009B4237 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		30F488931F3D9F68009B4237 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		30F488971F3D9FC4009B4237 /* DownloaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderCell.h; sourceTree = "<group>"; };
+		30F488981F3D9FC4009B4237 /* DownloaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderCell.m; sourceTree = "<group>"; };
+		30F488991F3D9FC4009B4237 /* DownloaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloaderCell.xib; sourceTree = "<group>"; };
 		3B5B71EFB6092477BC299176 /* libPods-WPYCustomControls.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WPYCustomControls.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EAFA67E71AE07110596749D /* Pods-WPYCustomControls.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPYCustomControls.release.xcconfig"; path = "Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls.release.xcconfig"; sourceTree = "<group>"; };
 		9003DCD6F0E445E13CA48B82 /* Pods-WPYCustomControls.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WPYCustomControls.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +200,52 @@
 			path = ../WPYCarouselView;
 			sourceTree = "<group>";
 		};
+		3055869B1F41BB8D00BA994C /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
+		3055869F1F41C18E00BA994C /* PopupController */ = {
+			isa = PBXGroup;
+			children = (
+				305586A11F41C1FD00BA994C /* SnailPopupController */,
+				305586A01F41C1E400BA994C /* PopViews */,
+			);
+			path = PopupController;
+			sourceTree = "<group>";
+		};
+		305586A01F41C1E400BA994C /* PopViews */ = {
+			isa = PBXGroup;
+			children = (
+				305586A81F41C22700BA994C /* SheetView */,
+			);
+			path = PopViews;
+			sourceTree = "<group>";
+		};
+		305586A11F41C1FD00BA994C /* SnailPopupController */ = {
+			isa = PBXGroup;
+			children = (
+				30DF5A061F42AD5800F11649 /* README.md */,
+				30DF5A071F42AD5800F11649 /* Sources */,
+			);
+			path = SnailPopupController;
+			sourceTree = "<group>";
+		};
+		305586A81F41C22700BA994C /* SheetView */ = {
+			isa = PBXGroup;
+			children = (
+				305586A91F41C23600BA994C /* SnailSheetCell.h */,
+				305586AA1F41C23600BA994C /* SnailSheetCell.m */,
+				305586AB1F41C23600BA994C /* SnailSheetView.h */,
+				305586AC1F41C23600BA994C /* SnailSheetView.m */,
+				305586AD1F41C23600BA994C /* SnailSheetViewConfig.h */,
+				305586AE1F41C23600BA994C /* SnailSheetViewConfig.m */,
+			);
+			path = SheetView;
+			sourceTree = "<group>";
+		};
 		307D57A91F2EE1560011D104 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +278,8 @@
 		307D57AC1F2EE1A60011D104 /* Function */ = {
 			isa = PBXGroup;
 			children = (
+				3055869F1F41C18E00BA994C /* PopupController */,
+				3055869B1F41BB8D00BA994C /* SheetView */,
 				30E72EDA1ED9303600A57307 /* CustomFunctionVC.h */,
 				30E72EDB1ED9303600A57307 /* CustomFunctionVC.m */,
 			);
@@ -207,6 +289,7 @@
 		307D57AD1F2EE1C40011D104 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				30F488871F3D9DFA009B4237 /* Download */,
 				307D57AE1F2EE2F10011D104 /* Map */,
 				30E72EDD1ED930CA00A57307 /* CustomModuleVC.h */,
 				30E72EDE1ED930CA00A57307 /* CustomModuleVC.m */,
@@ -263,6 +346,8 @@
 		30D7A94A1ED8010D000BC057 /* WPYManager */ = {
 			isa = PBXGroup;
 			children = (
+				305586951F41769600BA994C /* IGShare.h */,
+				305586961F41769600BA994C /* IGShare.m */,
 			);
 			path = WPYManager;
 			sourceTree = "<group>";
@@ -316,6 +401,15 @@
 			path = VB;
 			sourceTree = "<group>";
 		};
+		30DF5A071F42AD5800F11649 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				30DF5A081F42AD5800F11649 /* SnailPopupController.h */,
+				30DF5A091F42AD5800F11649 /* SnailPopupController.m */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		30E72F241ED978BC00A57307 /* thirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +425,32 @@
 				30E72F271ED9791F00A57307 /* AlipaySDK.framework */,
 			);
 			path = AliSDK;
+			sourceTree = "<group>";
+		};
+		30F488871F3D9DFA009B4237 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				30F488881F3D9E30009B4237 /* DownloadManager */,
+				30F488921F3D9F68009B4237 /* DownloadViewController.h */,
+				30F488931F3D9F68009B4237 /* DownloadViewController.m */,
+				30F488971F3D9FC4009B4237 /* DownloaderCell.h */,
+				30F488981F3D9FC4009B4237 /* DownloaderCell.m */,
+				30F488991F3D9FC4009B4237 /* DownloaderCell.xib */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		30F488881F3D9E30009B4237 /* DownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				30F488891F3D9E41009B4237 /* MCDownloader.h */,
+				30F4888A1F3D9E41009B4237 /* MCDownloader.m */,
+				30F4888B1F3D9E41009B4237 /* MCDownloadOperation.h */,
+				30F4888C1F3D9E41009B4237 /* MCDownloadOperation.m */,
+				30F4888D1F3D9E41009B4237 /* MCDownloadReceipt.h */,
+				30F4888E1F3D9E41009B4237 /* MCDownloadReceipt.m */,
+			);
+			path = DownloadManager;
 			sourceTree = "<group>";
 		};
 		7A4E662E45AB2337732195DD /* Pods */ = {
@@ -456,7 +576,7 @@
 				TargetAttributes = {
 					E0FD62781E5944E100763A96 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3U7NTNRMAV;
+						DevelopmentTeam = B9QLYR7QH7;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -493,6 +613,7 @@
 				E0FD62891E5944E100763A96 /* Assets.xcassets in Resources */,
 				30E72F281ED9792000A57307 /* AlipaySDK.bundle in Resources */,
 				E0FD62871E5944E100763A96 /* Main.storyboard in Resources */,
+				30F4889B1F3D9FC4009B4237 /* DownloaderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +662,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -557,23 +678,34 @@
 				309FE9051F2F12A8006BE610 /* IGAlertView.m in Sources */,
 				E0FD62A31E594C7900763A96 /* CustomViewVC.m in Sources */,
 				30F09A911F301FCF001C5035 /* ClusterAnnotationView.m in Sources */,
+				30DF5A0A1F42AD5800F11649 /* README.md in Sources */,
 				309FE9121F2F4201006BE610 /* ViewAnnView.m in Sources */,
+				305586971F41769600BA994C /* IGShare.m in Sources */,
+				30F4889A1F3D9FC4009B4237 /* DownloaderCell.m in Sources */,
 				30F09A941F304764001C5035 /* IGUtils.m in Sources */,
 				309FE90B1F2F3422006BE610 /* IGAnnotation.m in Sources */,
 				30D7A9601ED80FF4000BC057 /* UIColor+Additions.m in Sources */,
 				304E30A11EC1BF71007C6055 /* WPYCarouselView.m in Sources */,
 				300030241EF7DD33001A4CFA /* MyPlayProgressView.m in Sources */,
+				30F4888F1F3D9E41009B4237 /* MCDownloader.m in Sources */,
+				305586AF1F41C23600BA994C /* SnailSheetCell.m in Sources */,
 				307D57B41F2F03C60011D104 /* MKMapView+ZoomLevel.m in Sources */,
+				30F488951F3D9F68009B4237 /* DownloadViewController.m in Sources */,
+				305586B11F41C23600BA994C /* SnailSheetViewConfig.m in Sources */,
 				30D7A9611ED80FF4000BC057 /* UIView+Toast.m in Sources */,
 				E0FD62981E59464000763A96 /* WPYNavigationController.m in Sources */,
+				305586B01F41C23600BA994C /* SnailSheetView.m in Sources */,
 				307D57B11F2EE3220011D104 /* MapVC.m in Sources */,
+				30F488901F3D9E41009B4237 /* MCDownloadOperation.m in Sources */,
 				30D7A94F1ED80B60000BC057 /* WPYItemBtn.m in Sources */,
 				30E72EDC1ED9303600A57307 /* CustomFunctionVC.m in Sources */,
 				E0FD62841E5944E100763A96 /* ViewController.m in Sources */,
 				30D7A95E1ED80FF4000BC057 /* CALayer+Additions.m in Sources */,
 				E0FD62A61E594C9600763A96 /* CustomButtonVC.m in Sources */,
 				E0FD62811E5944E100763A96 /* AppDelegate.m in Sources */,
+				30F488911F3D9E41009B4237 /* MCDownloadReceipt.m in Sources */,
 				E0FD627E1E5944E100763A96 /* main.m in Sources */,
+				30DF5A0B1F42AD5800F11649 /* SnailPopupController.m in Sources */,
 				30D7A95F1ED80FF4000BC057 /* NSDate+Additions.m in Sources */,
 				30D7A9621ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m in Sources */,
 				E0FD62991E59464000763A96 /* WPYTabBarController.m in Sources */,
@@ -697,7 +829,7 @@
 			baseConfigurationReference = 9003DCD6F0E445E13CA48B82 /* Pods-WPYCustomControls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3U7NTNRMAV;
+				DEVELOPMENT_TEAM = B9QLYR7QH7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WPYCustomControls/thirdLibrary/AliSDK",
@@ -706,7 +838,7 @@
 				INFOPLIST_FILE = WPYCustomControls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "wpy-person.WPYCustomControls";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imguider.yk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -716,7 +848,7 @@
 			baseConfigurationReference = 3EAFA67E71AE07110596749D /* Pods-WPYCustomControls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3U7NTNRMAV;
+				DEVELOPMENT_TEAM = B9QLYR7QH7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WPYCustomControls/thirdLibrary/AliSDK",
@@ -725,7 +857,7 @@
 				INFOPLIST_FILE = WPYCustomControls/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "wpy-person.WPYCustomControls";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imguider.yk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

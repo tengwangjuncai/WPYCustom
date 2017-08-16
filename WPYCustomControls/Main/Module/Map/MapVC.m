@@ -31,7 +31,7 @@ static CGFloat maxDefreesARC = 360;
 @property (nonatomic, strong) MKMapView * mapView;
 
 @property  (nonatomic, strong)CLLocationManager * locationManager;
-@property (nonatomic, strong) CLLocation * location;
+@property (nonatomic, strong) CLLocation * clocation;
 @property (nonatomic, strong) MKAnnotationView * userView;
 @property (nonatomic, strong) NSArray<id<MKAnnotation>> * annotations;
 @property (nonatomic, strong) KPClusteringController * clusteringController;
@@ -89,7 +89,6 @@ static CGFloat maxDefreesARC = 360;
     
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
-    _locationManager.distanceFilter = 100;// 设置定位距离过滤参数（当本次定位和上次定位超过这个值时，调用代理方法）
     _locationManager.desiredAccuracy = kCLLocationAccuracyBest;// 设置定位精度（精度越高越耗电）
     //定位服务是否可用
     BOOL enable = [CLLocationManager locationServicesEnabled];
@@ -124,9 +123,9 @@ static CGFloat maxDefreesARC = 360;
         p *= -1;
         IGAnnotation * annotation = [[IGAnnotation alloc] init];
       
-        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(self.location.coordinate.latitude + p * i *0.01,self.location.coordinate.longitude + p * i *0.01);
+        CLLocationCoordinate2D location = CLLocationCoordinate2DMake(self.clocation.coordinate.latitude + p * i *0.01,self.clocation.coordinate.longitude + p * i *0.01);
         
-        annotation.coordinate = location;
+        annotation.coordinate = location;//[IGUtils transform:location];
         
         annotation.title = [NSString stringWithFormat:@"%d",i];
         annotation.tag = i;
@@ -137,7 +136,10 @@ static CGFloat maxDefreesARC = 360;
     
     
     self.annotations = [NSArray arrayWithArray:annArray];
-   // [self zoomMapViewToFitAnnotationsAnimated:YES];
+    
+    // [_mapView setCenterCoordinate:[IGUtils transform:self.clocation.coordinate] zoomLevel:13 animated:YES];
+    
+    [self zoomMapViewToFitAnnotationsAnimated:YES];
 }
 
 
@@ -208,12 +210,12 @@ static CGFloat maxDefreesARC = 360;
         if (kiOS9Later) {
             
             _mapView.showsScale = YES;
-            _mapView.showsTraffic = NO;
+            _mapView.showsTraffic = YES;
         }
         
-        _mapView.showsPointsOfInterest = NO;
-        _mapView.showsBuildings = NO;
-        _mapView.pitchEnabled = NO;
+        _mapView.showsPointsOfInterest = YES;
+        _mapView.showsBuildings = YES;
+        _mapView.pitchEnabled = YES;
         _mapView.rotateEnabled = NO;
         
         _mapView.delegate = self;
@@ -292,11 +294,19 @@ static CGFloat maxDefreesARC = 360;
 //        
 //        self.realTimeLocation(newLocation,nil);
 //    }
-    self.location = newLocation;
+    self.clocation = newLocation;
     
     NSLog(@"%f----%f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     
-    [_mapView setCenterCoordinate:self.location.coordinate zoomLevel:13 animated:YES];
+    
+    // 获取当前的跨度
+    MKCoordinateSpan span = self.mapView.region.span;
+    // 设置回到用户刚开始的区域 region(结构体) --1.中心点经纬度(结构体)--> 经度和纬度  2.经纬度跨度(结构体)-->经度跨度和纬度跨度
+    
+    //self.mapView.getZoomLevel = 13.0;
+    // 设置区域并使用动画
+    //[self.mapView setRegion:MKCoordinateRegionMake([IGUtils transform:self.clocation.coordinate], span) animated:YES];
+
 //    if (self.firstLocation && self.onceLocation) {
 //        self.onceLocation(newLocation,nil);
 //        self.firstLocation = NO;
@@ -412,7 +422,7 @@ static CGFloat maxDefreesARC = 360;
     
     MKDirectionsRequest * request = [[MKDirectionsRequest alloc] init];
     
-    CLLocationCoordinate2D coorself = self.location.coordinate;
+    CLLocationCoordinate2D coorself = [IGUtils transform:self.clocation.coordinate];
     
     CLLocationCoordinate2D coorto = coordinate;
     

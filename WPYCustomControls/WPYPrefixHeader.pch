@@ -11,6 +11,26 @@
 #import "UIColor+Additions.h"
 #import "WPYConstant.h"
 #import "Masonry.h"
+
+
+
+#define RGB(r,g,b)  [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:1.0f]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+// appkey
+#define UMENG_APPKEY @"58fed511f29d983427000404"// 友盟
+#define BUGLY_APPID @"91b6c2d6ae"//bugly
+
+// ---------------------------第三方登录、支付
+#define UMENG_FB_APPID @"296422350804944"
+
+#define UMENG_QQ_APPID @"1106076593"
+
+#define UMENG_WB_APPKEY @"467068712"
+#define UMENG_WB_APPSECRET @"edadefd1f9257d99ac0d5ff537767bd6"
+
+#define UMENG_WX_APPID @"wxa64da1c01dc0c905"
+#define UMENG_WX_APPSECRET @"a3542e4471088b5dcaf1c49f538121a4"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

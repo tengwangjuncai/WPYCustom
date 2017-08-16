@@ -8,6 +8,8 @@
 
 #import "CustomModuleVC.h"
 #import "MapVC.h"
+#import "IGShare.h"
+#import "DownloadViewController.h"
 @interface CustomModuleVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView * tabView;
@@ -29,8 +31,7 @@
     _tabView.dataSource = self;
     [self.view addSubview:_tabView];
     
-    _dataSource = [NSMutableArray arrayWithArray:@[@"地图",@"下载",@"支付",@"登录",@"数据管理"]];
-    
+    _dataSource = [NSMutableArray arrayWithArray:@[@"地图",@"下载",@"友盟分享"]];//,@"支付",@"登录",@"数据管理
 }
 
 
@@ -58,7 +59,20 @@
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
+        case 1:
+        {
+            DownloadViewController * vc = [[DownloadViewController alloc] init];
             
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case 2:{
+            
+            [IGShare shareWebPageToPlatformType:UMSocialPlatformType_WechatTimeLine withURL:@"http://www.imguider.com" Title:@"测试title" descr:@"测试desc" thumImage:[UIImage imageNamed:@"share"]   completion:^(id result, NSError *error) {
+                
+            }];
+        }
+            break;
         default:
             break;
     }
