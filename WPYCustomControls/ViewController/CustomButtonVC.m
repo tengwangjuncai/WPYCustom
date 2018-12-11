@@ -7,11 +7,16 @@
 //
 
 #import "CustomButtonVC.h"
-#import "MyPlayProgressView.h"
+#import "PlayBar.h"
 #import "UIImageView+WebCache.h"
 #import "progressView.h"
 #import "SDWebImagePrefetcher.h"
-@interface CustomButtonVC ()
+#import "DAYCalendarView.h"
+#import "TripDescView.h"
+
+#import "SnailPopupController.h"
+#import "SnailSheetView.h"
+@interface CustomButtonVC ()<TripDescViewDelegate>
 
 @end
 
@@ -23,15 +28,51 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    MyPlayProgressView * view = [[MyPlayProgressView alloc] initWithFrame:CGRectMake(50, 200, SCREEN_WIDTH - 100, 44)];
-    [self.view addSubview:view];
+    PlayBar * playBar = [PlayBar shareManeger];
+    
+    playBar.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    playBar.center = self.view.center;
+   // [self.view addSubview:playBar];
     
    
+    DAYCalendarView * calendarView = [[DAYCalendarView alloc] initWithFrame:CGRectMake(20, kNavigationBarHeight, SCREEN_WIDTH - 40, (SCREEN_WIDTH - 40)/7*6)];
     
-    [self createImage];
+    //[self.view addSubview:calendarView];
+    
+    
+   // [self createImage];
+    
+    self.navigationController.navigationBar.hidden = YES;
+    
+    
+    UIButton * btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = CGRectMake((SCREEN_WIDTH - 120)/2,SCREEN_HEIGHT - 150, 120, 44);
+    [btn setTitle:@"展示全部" forState:UIControlStateNormal];
+   [btn addTarget:self action:@selector(pop) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    
     
 }
 
+
+
+
+-(void)pop {
+
+    TripDescView * sheet = [[TripDescView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT/2)];
+    sheet.delegate = self;
+    
+    self.sl_popupController = [SnailPopupController new];
+    self.sl_popupController.layoutType = PopupLayoutTypeTop;
+    [self.sl_popupController presentContentView:sheet];
+
+}
+
+
+- (void)closeTripView {
+    [self.sl_popupController dismiss];
+}
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     

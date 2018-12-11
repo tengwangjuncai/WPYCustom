@@ -25,7 +25,17 @@
     [self createViewControllers];
 }
 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    for (UIView *child in self.tabBar.subviews) {
+        if ([child isKindOfClass:[UIControl class]]) {
+            [child removeFromSuperview];
+        }
+    }
+}
 - (void)setSelectedIndex:(NSUInteger)selectedIndex {
+    
     [super setSelectedIndex:selectedIndex];
     self.mainTabBar.selectIndex = selectedIndex;
 }

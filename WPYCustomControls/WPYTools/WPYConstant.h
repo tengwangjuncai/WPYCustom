@@ -91,7 +91,8 @@
 
 #define lineSpace  8
 // 定义导航条和tabbar高度
-#define kNavigationBarHeight 64
+// 定义导航条和tabbar高度
+#define kNavigationBarHeight    (ISiPhoneX ? 88:64)
 #define kTableBarHeight 49
 
 // 地图默认缩放级别
@@ -108,6 +109,7 @@
 #define ISiPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
 #define ISiPad  UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad
 
+#define ISiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 //判断当前系统版本号
 #ifndef kSystemVersion
 #define kSystemVersion [[UIDevice currentDevice] systemVersion].floatValue

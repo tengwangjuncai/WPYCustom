@@ -16,6 +16,8 @@
 #import "ViewAnnView.h"
 #import <kingpin/kingpin.h>
 #import "IGUtils.h"
+#import "MKMapDimOverlay.h"
+#import "MKMapDimOverlayView.h"
 static CGFloat minimunZoomARC = 0.0001;
 static CGFloat annotatonGrgionPadFactor = 1.15;
 static CGFloat maxDefreesARC = 360;
@@ -26,7 +28,7 @@ static CGFloat maxDefreesARC = 360;
 #ifndef kiOS9Later
 #define kiOS9Later (kSystemVersion >= 9)
 #endif
-@interface MapVC ()<CLLocationManagerDelegate,MKMapViewDelegate,ViewAnnViewDelegate>
+@interface MapVC ()<CLLocationManagerDelegate,MKMapViewDelegate,ViewAnnViewDelegate,MKOverlay>
 
 @property (nonatomic, strong) MKMapView * mapView;
 
@@ -48,6 +50,12 @@ static CGFloat maxDefreesARC = 360;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self loadDataSource];
+        
+        [_mapView setCenterCoordinate:CLLocationCoordinate2DMake(35.039623,135.729249) zoomLevel:15 animated:YES];
+        
+        
+        [self zoomMapViewToFitAnnotationsAnimated:YES];
+       // [self addDimOverlay];
     });
     
 }
@@ -83,6 +91,14 @@ static CGFloat maxDefreesARC = 360;
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self mapWillDisappear];
+}
+
+- (void)addDimOverlay {
+    
+    MKMapDimOverlay * dimOverlay = [[MKMapDimOverlay alloc] initWithMapView:self.mapView];
+    
+    dimOverlay.dimOverlayCoordinates = CLLocationCoordinate2DMake(35.039623,135.729249);
+    [self.mapView addOverlay:dimOverlay];
 }
 - (void)setup {
     
@@ -137,7 +153,7 @@ static CGFloat maxDefreesARC = 360;
     
     self.annotations = [NSArray arrayWithArray:annArray];
     
-    // [_mapView setCenterCoordinate:[IGUtils transform:self.clocation.coordinate] zoomLevel:13 animated:YES];
+     [_mapView setCenterCoordinate:[IGUtils transform:CLLocationCoordinate2DMake(35.039623,135.729249)] zoomLevel:13 animated:YES];
     
     [self zoomMapViewToFitAnnotationsAnimated:YES];
 }
@@ -146,11 +162,11 @@ static CGFloat maxDefreesARC = 360;
 - (void)setAnnotations:(NSArray<id<MKAnnotation>> *)annotations {
     
     _annotations = annotations;
-    [self.mapView removeAnnotations:self.mapView.annotations];
+//    [self.mapView removeAnnotations:self.mapView.annotations];
+//    
+//    [self.clusteringController setAnnotations:_annotations];
     
-    [self.clusteringController setAnnotations:_annotations];
-    
-   // [self.mapView addAnnotations:annotations];
+    [self.mapView addAnnotations:annotations];
 }
 
 - (KPClusteringController *)clusteringController {
@@ -295,7 +311,7 @@ static CGFloat maxDefreesARC = 360;
 //        self.realTimeLocation(newLocation,nil);
 //    }
     self.clocation = newLocation;
-    
+
     NSLog(@"%f----%f",newLocation.coordinate.latitude, newLocation.coordinate.longitude);
     
     
@@ -316,12 +332,10 @@ static CGFloat maxDefreesARC = 360;
 }
 
 
-
 - (MKAnnotationView *)dequeueReusableAnnotationViewWithIdentifier:(NSString *)identifier {
     
     return [self.mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
 }
-
 - (MKAnnotationView *)viewForAnnotation:(id<MKAnnotation>)annotation {
     
     return [self.mapView viewForAnnotation:annotation];
@@ -329,62 +343,65 @@ static CGFloat maxDefreesARC = 360;
 
 #pragma mark - MKMapViewDelegate
 
+
+
+
 - (nullable MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
     
-    if ([annotation isKindOfClass:[MKUserLocation class]]) {
-        
-        if (!self.userView) {
-            self.userView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"userLocationIdentifier"];
-            self.userView.image = [UIImage imageNamed:@"定位"];
-            [self.userView setTransform:CGAffineTransformMakeRotation(.001)];
-        }
-        
-        return self.userView;
-    }
-    
-    if ([annotation isKindOfClass:[KPAnnotation class]]) {
-        
-        KPAnnotation *pin = (KPAnnotation *)annotation;
-        
-            
-            if (pin.isCluster) {
-                
-                ClusterAnnotationView * view = (ClusterAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterAnnotationView"];
-                if (!view) {
-                    view = [[ClusterAnnotationView alloc] initWithAnnotation:pin reuseIdentifier:@"ClusterAnnotationView"];
-                }
-                
-                
-                view.countStr = [NSString stringWithFormat:@"%ld",pin.annotations.count]; //@().stringValue;
-                
-                NSLog(@"-----%@   %@",@(pin.annotations.count).stringValue,[view  class]);
-                
-                return view;
-            }
-        
-        
-        while ([pin isKindOfClass:[KPAnnotation class]]) {
-            
-            pin = [[pin.annotations allObjects] firstObject];
-        }
-        
-        annotation = pin;
-    }
-    
-    if (annotation) {
-        
-        ViewAnnView *customView = (ViewAnnView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"customView"];
-        
-        customView.delegate = self;
-        if (!customView){
-            customView =[[ViewAnnView alloc] initWithAnnotation:annotation reuseIdentifier:@"customView"];
-          //  customView.delegate = self;
-        }
-        
-        customView.annotation = annotation;
-        
-        return  customView;
-    }
+//    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+//        
+//        if (!self.userView) {
+//            self.userView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"userLocationIdentifier"];
+//            self.userView.image = [UIImage imageNamed:@"定位"];
+//            [self.userView setTransform:CGAffineTransformMakeRotation(.001)];
+//        }
+//        
+//        return self.userView;
+//    }
+//    
+//    if ([annotation isKindOfClass:[KPAnnotation class]]) {
+//        
+//        KPAnnotation *pin = (KPAnnotation *)annotation;
+//        
+//            
+//            if (pin.isCluster) {
+//                
+//                ClusterAnnotationView * view = (ClusterAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ClusterAnnotationView"];
+//                if (!view) {
+//                    view = [[ClusterAnnotationView alloc] initWithAnnotation:pin reuseIdentifier:@"ClusterAnnotationView"];
+//                }
+//                
+//                
+//                view.countStr = [NSString stringWithFormat:@"%ld",pin.annotations.count]; //@().stringValue;
+//                
+//                NSLog(@"-----%@   %@",@(pin.annotations.count).stringValue,[view  class]);
+//                
+//                return view;
+//            }
+//        
+//        
+//        while ([pin isKindOfClass:[KPAnnotation class]]) {
+//            
+//            pin = [[pin.annotations allObjects] firstObject];
+//        }
+//        
+//        annotation = pin;
+//    }
+//    
+//    if (annotation) {
+//        
+//        ViewAnnView *customView = (ViewAnnView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"customView"];
+//        
+//        customView.delegate = self;
+//        if (!customView){
+//            customView =[[ViewAnnView alloc] initWithAnnotation:annotation reuseIdentifier:@"customView"];
+//          //  customView.delegate = self;
+//        }
+//        
+//        customView.annotation = annotation;
+//        
+//        return  customView;
+//    }
     
     return nil;
 }
@@ -412,6 +429,13 @@ static CGFloat maxDefreesARC = 360;
         return line;
     }
     
+    
+    if([overlay isMemberOfClass:[MKMapDimOverlay class]]) {
+        MKMapDimOverlayView *dimOverlayView = [[MKMapDimOverlayView alloc] initWithOverlay:overlay];
+        //        dimOverlayView.overlayAlpha = 0.06;
+        //        dimOverlayView.overlayColor = [UIColor cyanColor];
+        return dimOverlayView;
+    }
     return nil;
 }
 

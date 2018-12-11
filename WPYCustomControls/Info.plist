@@ -98,6 +98,10 @@
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSCameraUsageDescription</key>
+	<string>使用相机权限</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>保存拍照图片</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

@@ -53,6 +53,7 @@
 
 - (void)layoutSubviews {
     
+    
     CGFloat btnY = 0;
     CGFloat btnW = self.frame.size.width / (self.subviews.count);
     CGFloat btnH = self.frame.size.height;
@@ -77,6 +78,7 @@
 }
 
 - (void)addTabBarButtonWithTabBarItem:(UITabBarItem *)tabBarItem {
+    
     
     WPYItemBtn * tabBarBtn = [[WPYItemBtn alloc] init];
     tabBarBtn.tabBarItem = tabBarItem;

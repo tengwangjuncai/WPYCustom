@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DownloaderCellDelegate<NSObject>
+
+- (void)playVideoWithURL:(NSString *)url;
+
+@end
+
 @interface DownloaderCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *showImageView;
@@ -20,6 +26,12 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 
+@property (nonatomic, copy) NSString * url;
+
+@property (nonatomic, weak) id<DownloaderCellDelegate> delegate;
+
 
 - (void)configDataWith:(NSDictionary *)dict;
+
+- (void)tapAction;
 @end

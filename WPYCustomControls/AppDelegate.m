@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 #import "WPYTabBarController.h"
 #import "IGShare.h"
-@interface AppDelegate ()
+#import "IMManager.h"
+#import <RongIMKit/RongIMKit.h>
+@interface AppDelegate ()<RCIMUserInfoDataSource>
 
+@property (nonatomic, strong)WPYTabBarController * tabVC;
 @end
 
 @implementation AppDelegate
@@ -23,12 +26,41 @@
     WPYTabBarController * tabBarController = [[WPYTabBarController alloc] init];
     NSLog(@"%ld",tabBarController.viewControllers.count);
     self.window.rootViewController = tabBarController;
+    self.tabVC = tabBarController;
     [self.window makeKeyAndVisible];
     [self setupUMSocialManager];
+    [[IMManager sharedManager] setupIM];
+    
     return YES;
 }
 
+- (UIViewController *)currentVC {
+    
+    return  ((UINavigationController *)self.tabVC.selectedViewController).visibleViewController;
+}
 
+
+
+- (void)onReceived:(RCMessage *)message
+              left:(int)nLeft
+            object:(id)object {
+    if ([message.content isMemberOfClass:[RCTextMessage class]]) {
+        RCTextMessage *testMessage = (RCTextMessage *)message.content;
+        NSLog(@"消息内容：%@", testMessage.content);
+    }
+    
+    NSLog(@"还剩余的未接收的消息数：%d", nLeft);
+}
+
+
+- (void)getUserInfoWithUserId:(NSString *)userId completion:(void (^)(RCUserInfo *))completion{
+    
+    
+    
+    RCUserInfo * userInfo = [[RCUserInfo alloc] init];
+    userInfo.userId = userId;
+    
+}
 - (void)setupUMSocialManager {
     
     // 设置友盟appkey

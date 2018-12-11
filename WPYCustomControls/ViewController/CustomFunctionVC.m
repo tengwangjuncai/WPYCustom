@@ -7,9 +7,9 @@
 //
 
 #import "CustomFunctionVC.h"
-#import "SnailPopupController.h"
-#import "SnailSheetView.h"
-@interface CustomFunctionVC ()<SnailSheetViewConfigDelegate,SnailSheetViewDelegate>
+#import "NumberSearchVC.h"
+#import "ScenicPoint.h"
+@interface CustomFunctionVC ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -21,7 +21,27 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self setNavigation];
+    [self createTableView];
+    [self setLargeTitle];
     
+}
+- (void)setLargeTitle {
+    
+    
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+    } else {
+        // Fallback on earlier versions
+    }
+    if (@available(iOS 11.0, *)) {
+        self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAutomatic;
+    } else {
+        // Fallback on earlier versions
+    }
+    
+}
+- (void)setNavigation {
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
     
     btn.frame = CGRectMake(0, 0, 44, 44);
@@ -32,121 +52,46 @@
     self.navigationItem.rightBarButtonItem = item;
 }
 
-- (SnailSheetView *)sheetViewWithDelegate:(id<SnailSheetViewConfigDelegate>)delegate {
+- (void)createTableView {
     
-    SnailSheetView * sheet = [[SnailSheetView alloc] initWithFrame:CGRectMake(100, 100, SCREEN_WIDTH, 300) configDelegate:delegate];
-    sheet.headerLabel.text = @"IMGuider.com";
+    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavigationBarHeight, SCREEN_WIDTH, SCREEN_HEIGHT - kNavigationBarHeight - 49) style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    [self.view addSubview:tableView];
     
-    sheet.models = [self sheetModels];
-    [sheet autoresizingFlexibleHeight];
-    
-    return sheet;
-}
-
-- (void)popSheet:(UIButton *)sender {
-    
-    SnailSheetView * sheet = [self sheetViewWithDelegate:self];
-    sheet.delegate = self;
-    sheet.didClickFooter = ^(SnailSheetView * _Nonnull sheetView) {
-        [self.sl_popupController dismiss];
-    };
-    
-    
-    self.sl_popupController = [SnailPopupController new];
-    self.sl_popupController.layoutType = PopupLayoutTypeBottom;
-    [self.sl_popupController presentContentView:sheet];
-    
+    if (@available(iOS 11.0, *)) {
+        tableView.contentInsetAdjustmentBehavior = NO;
+    } else {
+        
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        // Fallback on earlier versions
+    }
 }
 
 
-#pragma mark - SnailSheetViewConfig
 
-- (SnailSheetViewLayout *)layoutOfItemInSheetView:(SnailSheetView *)sheetView {
-    
-    return [SnailSheetViewLayout layoutWithItemSize:CGSizeMake(70, 100)
-                                      itemEdgeInset:UIEdgeInsetsMake(15, 10, 5, 10)
-                                        itemSpacing:2
-                                     imageViewWidth:60
-                                         subSpacing:5];
-}
+
+
+
 
 #pragma mark - SnailSheetViewDelegate
 
-- (void)sheetView:(SnailSheetView *)sheetView didSelectItemAtSection:(NSInteger)section index:(NSInteger)index {
-    SnailSheetItemModel *model = [self sheetModels][section][index];
-    @weakify(self);
-    self.sl_popupController.didDismiss = ^(SnailPopupController * _Nonnull popupController) {
-        @strongify(self);
+
+
+- (NSMutableArray<ScenicPoint*> *)createDataSource {
+    
+    NSMutableArray * arr = [NSMutableArray new];
+    
+    for (int i = 0; i < 20; i++) {
+        ScenicPoint * point = [[ScenicPoint alloc] init];
+        point.spotname = [NSString stringWithFormat:@"第%d个测试数据",i];
+        point.number = @(i).stringValue;
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:model.text preferredStyle:UIAlertControllerStyleAlert];
-        [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:NULL]];
-        [self presentViewController:alert animated:YES completion:NULL];
-    };
-    [self.sl_popupController dismiss];
-}
-
-
-#define titleKey @"title"
-#define imgNameKey @"imageName"
-
-
-- (NSArray *)sheetModels {
-    
-    NSArray *arr1 = @[@{titleKey   : @"发送给朋友",
-                        imgNameKey : @"sheet_Share"},
-                      
-                      @{titleKey   : @"分享到朋友圈",
-                        imgNameKey : @"sheet_Moments"},
-                      
-                      @{titleKey   : @"收藏",
-                        imgNameKey : @"sheet_Collection"},
-                      
-                      @{titleKey   : @"分享到\n手机QQ",
-                        imgNameKey : @"sheet_qq"},
-                      
-                      @{titleKey   : @"分享到\nQQ空间",
-                        imgNameKey : @"sheet_qzone"},
-                      
-                      @{titleKey   : @"在QQ浏览器\n中打开",
-                        imgNameKey : @"sheet_qqbrowser"}];
-    
-    NSArray *arr2 = @[@{titleKey   : @"查看公众号",
-                        imgNameKey : @"sheet_Verified"},
-                      
-                      @{titleKey   : @"复制链接",
-                        imgNameKey : @"sheet_CopyLink"},
-                      
-                      @{titleKey   : @"复制文本",
-                        imgNameKey : @"sheet_CopyText"},
-                      
-                      @{titleKey   : @"刷新",
-                        imgNameKey : @"sheet_Refresh"},
-                      
-                      @{titleKey   : @"调整字体",
-                        imgNameKey : @"sheet_Font"},
-                      
-                      @{titleKey   : @"投诉",
-                        imgNameKey : @"sheet_Complaint"}];
-    
-    NSMutableArray *array1 = [NSMutableArray array];
-    for (NSDictionary *dict in arr1) {
-        NSString *text = [dict objectForKey:titleKey];
-        NSString *imgName = [dict objectForKey:imgNameKey];
-        [array1 addObject:[SnailSheetItemModel modelWithText:text
-                                                       image:[UIImage imageNamed:imgName]]];
+        [arr addObject:point];
     }
     
-    NSMutableArray *array2 = [NSMutableArray array];
-    for (NSDictionary *dict in arr2) {
-        NSString *text = [dict objectForKey:titleKey];
-        NSString *imgName = [dict objectForKey:imgNameKey];
-        [array2 addObject:[SnailSheetItemModel modelWithText:text
-                                                       image:[UIImage imageNamed:imgName]]];
-    }
-    
-    return [NSMutableArray arrayWithObjects:array1, array2, nil];
+    return arr;
 }
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -161,5 +106,78 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld 大头title测",indexPath.row];
+    
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 30;
+}
+
+- (void)encodeWithCoder:(nonnull NSCoder *)aCoder {
+    
+}
+
+- (void)traitCollectionDidChange:(nullable UITraitCollection *)previousTraitCollection {
+    
+}
+
+- (void)preferredContentSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NumberSearchVC * searchVC = [[NumberSearchVC alloc] init];
+    
+    searchVC.ScenicPointsArray = [self createDataSource];
+    [self.navigationController pushViewController:searchVC animated:YES];
+}
+//- (CGSize)sizeForChildContentContainer:(nonnull id<UIContentContainer>)container withParentContainerSize:(CGSize)parentSize {
+//
+//}
+//
+//- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(nonnull id<UIContentContainer>)container {
+//    <#code#>
+//}
+//
+//- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+//    <#code#>
+//}
+//
+//- (void)willTransitionToTraitCollection:(nonnull UITraitCollection *)newCollection withTransitionCoordinator:(nonnull id<UIViewControllerTransitionCoordinator>)coordinator {
+//    <#code#>
+//}
+//
+//- (void)didUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context withAnimationCoordinator:(nonnull UIFocusAnimationCoordinator *)coordinator {
+//    <#code#>
+//}
+//
+//- (void)setNeedsFocusUpdate {
+//    <#code#>
+//}
+//
+//- (BOOL)shouldUpdateFocusInContext:(nonnull UIFocusUpdateContext *)context {
+//    <#code#>
+//}
+//
+//- (void)updateFocusIfNeeded {
+//    <#code#>
+//}
 
 @end
