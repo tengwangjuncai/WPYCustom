@@ -58,11 +58,6 @@
 		307CC5E020D1318E00601BD7 /* 闪光灯.png in Resources */ = {isa = PBXBuildFile; fileRef = 307CC5DF20D1318E00601BD7 /* 闪光灯.png */; };
 		307D57B11F2EE3220011D104 /* MapVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D57B01F2EE3220011D104 /* MapVC.m */; };
 		307D57B41F2F03C60011D104 /* MKMapView+ZoomLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 307D57B31F2F03C60011D104 /* MKMapView+ZoomLevel.m */; };
-		308524CA1FC804DA003CAD86 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308524C11FC804D9003CAD86 /* WMPlayer.bundle */; };
-		308524CB1FC804DA003CAD86 /* FastForwardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308524C61FC804D9003CAD86 /* FastForwardView.xib */; };
-		308524CC1FC804DA003CAD86 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 308524C71FC804D9003CAD86 /* WMLightView.m */; };
-		308524CD1FC804DA003CAD86 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 308524C81FC804D9003CAD86 /* FastForwardView.m */; };
-		308524CE1FC804DA003CAD86 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 308524C91FC804D9003CAD86 /* WMPlayer.m */; };
 		30874BA61FC7F9A600A2160E /* WPYPlayVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 30874BA51FC7F9A600A2160E /* WPYPlayVC.m */; };
 		30874BBA1FC8012000A2160E /* WMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30874BB81FC8012000A2160E /* WMDragView.m */; };
 		3089296A1FCFD8AA00A26443 /* Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 308929681FCFD8A800A26443 /* Transition.m */; };
@@ -143,6 +138,11 @@
 		30F488951F3D9F68009B4237 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F488931F3D9F68009B4237 /* DownloadViewController.m */; };
 		30F4889A1F3D9FC4009B4237 /* DownloaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30F488981F3D9FC4009B4237 /* DownloaderCell.m */; };
 		30F4889B1F3D9FC4009B4237 /* DownloaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30F488991F3D9FC4009B4237 /* DownloaderCell.xib */; };
+		30FB7C8E21BFB42F005A1C96 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30FB7C8521BFB42F005A1C96 /* WMPlayer.bundle */; };
+		30FB7C8F21BFB42F005A1C96 /* FastForwardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30FB7C8A21BFB42F005A1C96 /* FastForwardView.xib */; };
+		30FB7C9021BFB42F005A1C96 /* WMLightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FB7C8B21BFB42F005A1C96 /* WMLightView.m */; };
+		30FB7C9121BFB42F005A1C96 /* FastForwardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FB7C8C21BFB42F005A1C96 /* FastForwardView.m */; };
+		30FB7C9221BFB42F005A1C96 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FB7C8D21BFB42F005A1C96 /* WMPlayer.m */; };
 		30FBFB401FC5514400EC2D8B /* MCDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFB3A1FC5513B00EC2D8B /* MCDownloadOperation.m */; };
 		30FBFB411FC5514400EC2D8B /* MCDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFB3B1FC5513D00EC2D8B /* MCDownloader.m */; };
 		30FBFB421FC5514400EC2D8B /* MCDownloadReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 30FBFB3C1FC5513F00EC2D8B /* MCDownloadReceipt.m */; };
@@ -239,14 +239,6 @@
 		307D57B01F2EE3220011D104 /* MapVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapVC.m; sourceTree = "<group>"; };
 		307D57B21F2F03C60011D104 /* MKMapView+ZoomLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+ZoomLevel.h"; sourceTree = "<group>"; };
 		307D57B31F2F03C60011D104 /* MKMapView+ZoomLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+ZoomLevel.m"; sourceTree = "<group>"; };
-		308524C11FC804D9003CAD86 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
-		308524C21FC804D9003CAD86 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
-		308524C41FC804D9003CAD86 /* WMLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLightView.h; sourceTree = "<group>"; };
-		308524C51FC804D9003CAD86 /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
-		308524C61FC804D9003CAD86 /* FastForwardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FastForwardView.xib; sourceTree = "<group>"; };
-		308524C71FC804D9003CAD86 /* WMLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLightView.m; sourceTree = "<group>"; };
-		308524C81FC804D9003CAD86 /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
-		308524C91FC804D9003CAD86 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		30874BA41FC7F9A600A2160E /* WPYPlayVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WPYPlayVC.h; sourceTree = "<group>"; };
 		30874BA51FC7F9A600A2160E /* WPYPlayVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WPYPlayVC.m; sourceTree = "<group>"; };
 		30874BB81FC8012000A2160E /* WMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDragView.m; sourceTree = "<group>"; };
@@ -365,6 +357,14 @@
 		30F488971F3D9FC4009B4237 /* DownloaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloaderCell.h; sourceTree = "<group>"; };
 		30F488981F3D9FC4009B4237 /* DownloaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloaderCell.m; sourceTree = "<group>"; };
 		30F488991F3D9FC4009B4237 /* DownloaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloaderCell.xib; sourceTree = "<group>"; };
+		30FB7C8521BFB42F005A1C96 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		30FB7C8621BFB42F005A1C96 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		30FB7C8821BFB42F005A1C96 /* WMLightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLightView.h; sourceTree = "<group>"; };
+		30FB7C8921BFB42F005A1C96 /* FastForwardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FastForwardView.h; sourceTree = "<group>"; };
+		30FB7C8A21BFB42F005A1C96 /* FastForwardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FastForwardView.xib; sourceTree = "<group>"; };
+		30FB7C8B21BFB42F005A1C96 /* WMLightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLightView.m; sourceTree = "<group>"; };
+		30FB7C8C21BFB42F005A1C96 /* FastForwardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastForwardView.m; sourceTree = "<group>"; };
+		30FB7C8D21BFB42F005A1C96 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
 		30FBFB3A1FC5513B00EC2D8B /* MCDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloadOperation.m; sourceTree = "<group>"; };
 		30FBFB3B1FC5513D00EC2D8B /* MCDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloader.m; sourceTree = "<group>"; };
 		30FBFB3C1FC5513F00EC2D8B /* MCDownloadReceipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCDownloadReceipt.m; sourceTree = "<group>"; };
@@ -685,34 +685,10 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
-		308524C01FC804D9003CAD86 /* WMPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				308524C11FC804D9003CAD86 /* WMPlayer.bundle */,
-				308524C21FC804D9003CAD86 /* WMPlayer.h */,
-				308524C31FC804D9003CAD86 /* View */,
-				308524C91FC804D9003CAD86 /* WMPlayer.m */,
-			);
-			name = WMPlayer;
-			path = "../../../../../../../Downloads/WMDragView-master/WMDragView/WMPlayer";
-			sourceTree = "<group>";
-		};
-		308524C31FC804D9003CAD86 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				308524C41FC804D9003CAD86 /* WMLightView.h */,
-				308524C51FC804D9003CAD86 /* FastForwardView.h */,
-				308524C61FC804D9003CAD86 /* FastForwardView.xib */,
-				308524C71FC804D9003CAD86 /* WMLightView.m */,
-				308524C81FC804D9003CAD86 /* FastForwardView.m */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		30874BA71FC7F9B700A2160E /* WPYPlayVC */ = {
 			isa = PBXGroup;
 			children = (
-				308524C01FC804D9003CAD86 /* WMPlayer */,
+				30FB7C8421BFB42F005A1C96 /* WMPlayer */,
 				30874BB71FC8012000A2160E /* WMDragView */,
 				30874BA41FC7F9A600A2160E /* WPYPlayVC.h */,
 				30874BA51FC7F9A600A2160E /* WPYPlayVC.m */,
@@ -1040,6 +1016,30 @@
 			path = DownloadManager;
 			sourceTree = "<group>";
 		};
+		30FB7C8421BFB42F005A1C96 /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				30FB7C8521BFB42F005A1C96 /* WMPlayer.bundle */,
+				30FB7C8621BFB42F005A1C96 /* WMPlayer.h */,
+				30FB7C8721BFB42F005A1C96 /* View */,
+				30FB7C8D21BFB42F005A1C96 /* WMPlayer.m */,
+			);
+			name = WMPlayer;
+			path = "../../../../../../../资料/我的项目/GodModel/WMPlayer-master/PlayerDemo/WMPlayer";
+			sourceTree = "<group>";
+		};
+		30FB7C8721BFB42F005A1C96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30FB7C8821BFB42F005A1C96 /* WMLightView.h */,
+				30FB7C8921BFB42F005A1C96 /* FastForwardView.h */,
+				30FB7C8A21BFB42F005A1C96 /* FastForwardView.xib */,
+				30FB7C8B21BFB42F005A1C96 /* WMLightView.m */,
+				30FB7C8C21BFB42F005A1C96 /* FastForwardView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		7A4E662E45AB2337732195DD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,7 +1142,6 @@
 				E0FD62751E5944E100763A96 /* Sources */,
 				E0FD62761E5944E100763A96 /* Frameworks */,
 				E0FD62771E5944E100763A96 /* Resources */,
-				1A1E3E81F9E148D3C90C6610 /* [CP] Embed Pods Frameworks */,
 				577E55029A5E846EABAC0A31 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -1165,7 +1164,7 @@
 				TargetAttributes = {
 					E0FD62781E5944E100763A96 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = B9QLYR7QH7;
+						DevelopmentTeam = 3U7NTNRMAV;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -1204,6 +1203,7 @@
 				307CC5D520D1000500601BD7 /* photograph@3x.png in Resources */,
 				303C1ACC1FD68ADF002B6EDE /* chatBg2.jpg in Resources */,
 				309FAD3A1FD7D8EE00438C8D /* qq.png in Resources */,
+				30FB7C8E21BFB42F005A1C96 /* WMPlayer.bundle in Resources */,
 				309FAD381FD7D8EE00438C8D /* twitter@3x.png in Resources */,
 				30063B0E1FD54AF400BDA9FD /* IGIMViewController.xib in Resources */,
 				30C246A41FDFC573002BA2D2 /* 箭头右@2x.png in Resources */,
@@ -1226,7 +1226,6 @@
 				30B9501B206B7C0800B7C780 /* MyTripCell.xib in Resources */,
 				303C1AC81FD66493002B6EDE /* MemberCell.xib in Resources */,
 				E0FD62891E5944E100763A96 /* Assets.xcassets in Resources */,
-				308524CA1FC804DA003CAD86 /* WMPlayer.bundle in Resources */,
 				30B95016206B79D700B7C780 /* AddTripCell.xib in Resources */,
 				307CC5DE20D1259700601BD7 /* 闪光灯关闭.png in Resources */,
 				30E72F281ED9792000A57307 /* AlipaySDK.bundle in Resources */,
@@ -1234,13 +1233,13 @@
 				30063B0D1FD54AF400BDA9FD /* menberInfoCell.xib in Resources */,
 				309FAD2C1FD7D8EE00438C8D /* wechat@2x.png in Resources */,
 				309FAD3D1FD7D8EE00438C8D /* webo@3x.png in Resources */,
+				30FB7C8F21BFB42F005A1C96 /* FastForwardView.xib in Resources */,
 				307CC5E020D1318E00601BD7 /* 闪光灯.png in Resources */,
 				303C1AD41FD699CB002B6EDE /* 返回@2x.png in Resources */,
 				309FAD371FD7D8EE00438C8D /* twitter@2x.png in Resources */,
 				309FAD301FD7D8EE00438C8D /* moment@3x.png in Resources */,
 				3035C48B20CA670700592B7B /* HomePageCell.xib in Resources */,
 				309FAD2F1FD7D8EE00438C8D /* wechat.png in Resources */,
-				308524CB1FC804DA003CAD86 /* FastForwardView.xib in Resources */,
 				309FAD401FD7D8EE00438C8D /* facebook@2x.png in Resources */,
 				309FAD331FD7D8EE00438C8D /* webo.png in Resources */,
 				307CC5D720D1000500601BD7 /* photograph_Select@3x.png in Resources */,
@@ -1254,28 +1253,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1A1E3E81F9E148D3C90C6610 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		577E55029A5E846EABAC0A31 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-resources.sh",
 				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_ROOT}/RongCloudIM/RongCloudIM/RongCloud.bundle",
@@ -1292,11 +1276,23 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RongCloud.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/zh-Hans.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Emoji.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCConfig.plist",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SAMKeychain.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WPYCustomControls/Pods-WPYCustomControls-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BF7B30F871C2626EBF7EB6E5 /* [CP] Check Pods Manifest.lock */ = {
@@ -1327,6 +1323,7 @@
 				30874BBA1FC8012000A2160E /* WMDragView.m in Sources */,
 				30063B091FD54AF400BDA9FD /* IGIMViewController.m in Sources */,
 				30FBFB411FC5514400EC2D8B /* MCDownloader.m in Sources */,
+				30FB7C9021BFB42F005A1C96 /* WMLightView.m in Sources */,
 				3061FCA31F7909CD00EFE25E /* NumberSearchVC.h in Sources */,
 				3061FCA41F7909CD00EFE25E /* NumberSearchVC.m in Sources */,
 				303C1AC91FD66493002B6EDE /* MemberCell.m in Sources */,
@@ -1369,6 +1366,7 @@
 				304E30A11EC1BF71007C6055 /* WPYCarouselView.m in Sources */,
 				30A95AE01F71625D00F605DB /* MyPlayProgressView.m in Sources */,
 				30B95015206B79D700B7C780 /* AddTripCell.m in Sources */,
+				30FB7C9221BFB42F005A1C96 /* WMPlayer.m in Sources */,
 				307D57B41F2F03C60011D104 /* MKMapView+ZoomLevel.m in Sources */,
 				30C9DA651F4DAB37006CB622 /* YUSegment.m in Sources */,
 				301CB6D41FDE966400B76B17 /* DAYNavigationBar.m in Sources */,
@@ -1397,15 +1395,13 @@
 				E0FD62811E5944E100763A96 /* AppDelegate.m in Sources */,
 				301CB6D71FDE966400B76B17 /* DAYIndicatorView.m in Sources */,
 				E0FD627E1E5944E100763A96 /* main.m in Sources */,
+				30FB7C9121BFB42F005A1C96 /* FastForwardView.m in Sources */,
 				309FAD021FD7D45700438C8D /* IGShare.m in Sources */,
-				308524CC1FC804DA003CAD86 /* WMLightView.m in Sources */,
 				30B9500E206B76A300B7C780 /* MyTrip.m in Sources */,
-				308524CE1FC804DA003CAD86 /* WMPlayer.m in Sources */,
 				308F760820638D9C00386CE4 /* MKMapDimOverlayView.m in Sources */,
 				301CB6D51FDE966400B76B17 /* DAYComponentView.m in Sources */,
 				30D7A95F1ED80FF4000BC057 /* NSDate+Additions.m in Sources */,
 				30D7A9621ED80FF4000BC057 /* UIWebView+TS_JavaScriptContext.m in Sources */,
-				308524CD1FC804DA003CAD86 /* FastForwardView.m in Sources */,
 				E0FD62991E59464000763A96 /* WPYTabBarController.m in Sources */,
 				301CB6D61FDE966400B76B17 /* DAYUtils.m in Sources */,
 				30C9DA671F4DAB37006CB622 /* README.md in Sources */,
@@ -1530,7 +1526,7 @@
 			baseConfigurationReference = 9003DCD6F0E445E13CA48B82 /* Pods-WPYCustomControls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B9QLYR7QH7;
+				DEVELOPMENT_TEAM = 3U7NTNRMAV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WPYCustomControls/thirdLibrary/AliSDK",
@@ -1549,7 +1545,7 @@
 			baseConfigurationReference = 3EAFA67E71AE07110596749D /* Pods-WPYCustomControls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = B9QLYR7QH7;
+				DEVELOPMENT_TEAM = 3U7NTNRMAV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WPYCustomControls/thirdLibrary/AliSDK",

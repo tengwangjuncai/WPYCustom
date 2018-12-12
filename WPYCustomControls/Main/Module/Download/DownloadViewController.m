@@ -324,7 +324,7 @@
     
     if (videoView) {
         [videoView pause];
-        videoView.isflow = NO;
+//        videoView.isflow = NO;
         [videoView removeFromSuperview];
     }
     playVC.url = receipt.filePath;
